@@ -1,0 +1,17 @@
+:root {
+    --primary_100: #dcdbdd;
+    --primary_300: #aeabaf;
+    --primary_500: #7c787e;
+    --primary_700: #4e4b4f;
+    --primary_900: #3a393b;
+    --secondary_100: #fdfacf;
+    --secondary_300: #f9ee61;
+    --secondary_500: #f6e50a;
+    --secondary_700: #c5b707;
+    --secondary_900: #988e06;
+    --teritary_100: #cee4dd;
+    --teritary_300: #99c7b8;
+    --teritary_500:#61a790;
+    --teritary_700: #47816e;
+    --teritary_900: #345e50;
+}
