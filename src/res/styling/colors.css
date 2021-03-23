@@ -14,4 +14,10 @@
     --teritary_500:#61a790;
     --teritary_700: #47816e;
     --teritary_900: #345e50;
+
+    --black_10: rgba(0, 0, 0, 0.1);
+    --black_30: rgba(0, 0, 0, 0.3);
+    --black_50: rgba(0, 0, 0, 0.5);
+    --black_70: rgba(0, 0, 0, 0.7);
+    --black_90: rgba(0, 0, 0, 0.9);
 }
