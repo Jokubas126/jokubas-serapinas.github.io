@@ -1,6 +1,6 @@
 $('document').ready(
     function() {
-        $('.js--section-features').waypoint(
+        $('.sectionIntroduction').waypoint(
             function(direction) {
                 if (direction == "down") {
                     $('nav').removeClass('stickyTransparent');
