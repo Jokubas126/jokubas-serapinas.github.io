@@ -165,8 +165,8 @@ header #frontInfo {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--primary_100);
-    box-shadow: 0 2px 2px var(--black_10);
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 3px 3px var(--black_10);
     z-index: 9999;
 }
 
@@ -181,8 +181,7 @@ header #frontInfo {
 
 .sticky .main-nav li a:link,
 .sticky .main-nav li a:visited {
-    padding: 16px 0px;
-    color: var(--primary_500);
+    color: var(--primary_900);
 }
 
 /*------------------------------------------*/
