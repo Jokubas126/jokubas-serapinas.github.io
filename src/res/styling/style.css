@@ -37,11 +37,10 @@ body {
 /*--------------------------------------------*/
 
 .row {
-    max-width: 1140px;
     margin: 0 auto;
 }
 
-section { padding: 80px 0px }
+section { padding-top: 80px }
 
 .box{ padding: 1%; }
 
@@ -117,14 +116,78 @@ header #frontInfo {
     font-weight: 300;
 }
 
+/* MAIN NAVIGATION */
+.main-nav {
+    width: 100%;
+    right: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 30px;
+    text-align: right;
+    float: right;
+}
+
+.main-nav #top-link {
+    text-align: left;
+    float: left;
+    margin-left: 60px;
+}
+
+.main-nav a {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.main-nav a:link,
+.main-nav a:visited {
+    padding: 5px 0px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav a:hover,
+.main-nav a:active{ border-bottom: 1px solid white; }
+
+/* STICKY NAVIGATION */
+
+.stickyTransparent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 9999;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 3px 3px var(--black_10);
+    z-index: 9999;
+}
+
+.sticky .main-nav a {
+    color: var(--primary_900);
+}
+
+.sticky .main-nav a:hover,
+.sticky .main-nav a:active {
+    border-bottom: 1px solid var(--teritary_700);
+}
+
 /*------------------------------------------*/
 /* INTRODUCTION */
 /*------------------------------------------*/
 
-#introduction {
-    margin-top: 60px;
+section #introduction {
     margin-left: 100px;
-    margin-bottom: 60px;
     text-align: left;
     color: var(--teritary_700); 
     font-weight: 300;

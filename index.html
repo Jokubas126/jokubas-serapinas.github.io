@@ -2,12 +2,25 @@
     <head>
         <title>Portfolio</title>
         <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="src/res/styling/queries.css">
+        <link rel="stylesheet" type="text/css" href="src/res/styling/colors.css">
         <link rel="stylesheet" type="text/css" href="src/res/styling/style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap&subset=latin-ext" rel="stylesheet">    </head>
-    <body>
+    
+        <body>
 
         <header>
+            <nav class="stickyTransparent">
+                <div class="row">
+                    <div class="main-nav ">
+                        <a id="top-link" href="#top">Jokubas Serapinas</a>  
+                        <a href="#">About me</a>   
+                        <a href="#">Portfolio</a>
+                    </div>
+                </div>
+            </nav>
+
             <div id="frontInfo">
                 <img src='src/res/styling/images/profile_picture.jpg' alt='Profile picture' class="profile_picture">
                 <p id="frontInfoName">Jokubas Serapinas</p>
@@ -15,20 +28,28 @@
             </div>
         </header>
 
-        <div id="introduction">
-            <p style="font-weight: 400;">Hey!</p>
-            <p>My name is Jokubas Serapinas and this is the introduction <br> of myself with some general information</p>
-        </div>
-
-        <div>
-            <div class="paragraphHeaderContainer" >
-                <h1 class="paragraphHeader">Timeline</h1>
+        <section class="sectionIntroduction">
+            <div id="introduction" >
+                <p style="font-weight: 400;">Hey!</p>
+                <p>My name is Jokubas Serapinas and this is the introduction <br> of myself with some general information</p>
             </div>
-
+        </section>
+        
+        <section>
             <div>
-                <p class="testPar"></p>
+                <div class="paragraphHeaderContainer" >
+                    <h1 class="paragraphHeader">Timeline</h1>
+                </div>
+    
+                <div>
+                    <p class="testPar"></p>
+                </div>
             </div>
-        </div>
+        </section>
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="src/res/js/jquery-waypoints.js"></script>
         <script src="src/res/js/script.js"></script>
     </body>
 </html>
