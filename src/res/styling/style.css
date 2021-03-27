@@ -40,7 +40,7 @@ body {
     margin: 0 auto;
 }
 
-section { padding: 80px 0px }
+section { padding-top: 80px }
 
 .box{ padding: 1%; }
 
@@ -186,7 +186,7 @@ header #frontInfo {
 /* INTRODUCTION */
 /*------------------------------------------*/
 
-#introduction {
+section #introduction {
     margin-left: 100px;
     text-align: left;
     color: var(--teritary_700); 
