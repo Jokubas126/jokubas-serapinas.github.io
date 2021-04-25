@@ -14,7 +14,7 @@ function provideMainPageData(){
         dataType: 'jsonp',
         success: function(data) {
             console.log('Successfully received data from server');
-            console.log("Received movie count: " + data.movieCount);
+            console.log("Received data type: " + data.data_type);
             populateDataToPage(data);
         },
         error: function (jqXHR, exception) {
@@ -40,5 +40,8 @@ function provideMainPageData(){
 }
 
 function populateDataToPage(data){
-    $('.paragraphHeader').html("Movie count: " + data.movieCount); 
+    $('#top-link').html(data.full_name); 
+    $('#frontInfoName').html(data.full_name); 
+    $('#frontInfoPosition').html(data.position); 
+    $('#intro_text').html(data.intro_text); 
 }
