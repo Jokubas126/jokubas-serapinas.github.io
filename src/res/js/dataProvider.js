@@ -39,9 +39,9 @@ function provideMainPageData(){
     })
 }
 
-function populateDataToPage(data){
+function populateDataToPage(data) {
     $('#top-link').html(data.full_name); 
     $('#frontInfoName').html(data.full_name); 
     $('#frontInfoPosition').html(data.position); 
-    $('#intro_text').html(data.intro_text); 
+    $('#intro_text').html(data.intro_text);
 }
