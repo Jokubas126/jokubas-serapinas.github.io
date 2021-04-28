@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Portfolio</title>
-        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="src/res/styling/normalize.css">
         <link rel="stylesheet" type="text/css" href="src/res/styling/queries.css">
         <link rel="stylesheet" type="text/css" href="src/res/styling/colors.css">
         <link rel="stylesheet" type="text/css" href="src/res/styling/style.css">
@@ -14,7 +14,7 @@
             <nav class="stickyTransparent">
                 <div class="row">
                     <div class="main-nav ">
-                        <a id="top-link" href="#top">Jokubas Serapinas</a>  
+                        <a id="top-link" href="#top"></a>  
                         <a href="#">About me</a>   
                         <a href="#">Portfolio</a>
                     </div>
@@ -23,15 +23,15 @@
 
             <div id="frontInfo">
                 <img src='src/res/styling/images/profile_picture.jpg' alt='Profile picture' class="profile_picture">
-                <p id="frontInfoName">Jokubas Serapinas</p>
-                <p id="frontInfoPosition">Android developer</p>
+                <p id="frontInfoName"></p>
+                <p id="frontInfoPosition"></p>
             </div>
         </header>
 
         <section class="sectionIntroduction">
             <div id="introduction" >
                 <p style="font-weight: 400;">Hey!</p>
-                <p>My name is Jokubas Serapinas and this is the introduction <br> of myself with some general information</p>
+                <p id="intro_text"></p>
             </div>
         </section>
         
@@ -50,6 +50,7 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="src/res/js/jquery-waypoints.js"></script>
+        <script src="src/res/js/dataProvider.js"></script>
         <script src="src/res/js/script.js"></script>
     </body>
 </html>
