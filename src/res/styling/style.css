@@ -38,6 +38,7 @@ body {
 
 .row {
     margin: 0 auto;
+    height: auto;
 }
 
 section { padding-top: 80px }
@@ -199,14 +200,10 @@ section #introduction {
 /*------------------------------------------*/
 
 footer {
+    height: auto;
     background-color: #333;
     padding: 30px;
-    font-size: 80%;
-}
-
-.contact-info {
-    float: left;
-    list-style: none;
+    font-size: 85%;
 }
 
 .footer-links {
@@ -247,23 +244,32 @@ footer {
 .footer-nav li a:hover,
 .footer-nav li a:active{ color: #ddd; }
 
-.contact-info #title {
+
+.contact-info {
+    text-align: left;
+    float: left;
+    list-style: none;
+}
+
+.contact-info td {
+    font-size: 95%;
+    font-weight: 300;
     color: #bbb;
-    margin-bottom: 5px;
-    font-size: 110%;
+    margin-right: 20px;
 }
 
-#email {
-    text-align: left;
-    font-size: 90%;
-    color: #888;
+#title {
+    color: #ccc;
+    padding-bottom: 10px;
+    font-size: 120%;
+    font-weight: 200;
 }
 
-#copyright {
-    margin-top: 25px;
-    font-size: 80%;
+#personal-email,
+#work-email {
+    padding-left: 10px;
+    color: #999;
     text-align: left;
-    color: #888;
 }
 
 .social-links li a:link,

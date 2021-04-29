@@ -42,7 +42,8 @@ function provideMainPageData(){
 function populateDataToPage(data) {
     $('#top-link').html(data.full_name); 
     $('#frontInfoName').html(data.full_name); 
-    $('#frontInfoPosition').html(data.position); 
+    $('#frontInfoPosition').html(data.position);
     $('#intro_text').html(data.intro_text);
-    $('.contact-info #email').html("E-mail: " + "serapinasjokubas@gmail.com");
+    $('#personal-email').html("serapinasjokubas@gmail.com");
+    $('#work-email').html("jokubas@shapegames.com");
 }
