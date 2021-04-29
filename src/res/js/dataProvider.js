@@ -44,4 +44,5 @@ function populateDataToPage(data) {
     $('#frontInfoName').html(data.full_name); 
     $('#frontInfoPosition').html(data.position); 
     $('#intro_text').html(data.intro_text);
+    $('.contact-info #email').html("E-mail: " + "serapinasjokubas@gmail.com");
 }

@@ -200,26 +200,38 @@ section #introduction {
 
 footer {
     background-color: #333;
-    padding: 30px 30px 15px 30px;
+    padding: 30px;
     font-size: 80%;
+}
+
+.contact-info {
+    float: left;
+    list-style: none;
+}
+
+.footer-links {
+    list-style: none;
+    text-align: right;
 }
 
 .footer-nav {
     list-style: none;
-    float: left;
+    text-align: right;
 }
 
 .social-links {
     list-style: none;
-    float: right;
+    text-align: right;
+    margin-bottom: 15px;
 }
 
 .footer-nav li,
 .social-links li {
-    display: inline-block;
     margin-right: 20px;
+    display: inline;
 }
 
+.footer-links li:last-child,
 .footer-nav li:last-child,
 .social-links li:last-child { margin: none; }
 
@@ -235,19 +247,23 @@ footer {
 .footer-nav li a:hover,
 .footer-nav li a:active{ color: #ddd; }
 
-footer p {
-    margin-top: 30px;
-    color: #888;
+.contact-info #title {
+    color: #bbb;
+    margin-bottom: 5px;
+    font-size: 110%;
 }
 
 #email {
-    text-align: right;
+    text-align: left;
     font-size: 90%;
+    color: #888;
 }
 
 #copyright {
+    margin-top: 25px;
     font-size: 80%;
     text-align: left;
+    color: #888;
 }
 
 .social-links li a:link,
