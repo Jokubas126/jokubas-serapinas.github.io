@@ -38,15 +38,24 @@ body {
 
 .row {
     margin: 0 auto;
-    height: auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 section { padding-top: 80px }
 
 .box{ padding: 1%; }
 
+table {  
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+th, td {
+    padding: 0;
+}
+
 .testPar {
-    height: 500px;
+    height: 100px;
 }
 
 /*------------------------------------------*/
@@ -200,54 +209,14 @@ section #introduction {
 /*------------------------------------------*/
 
 footer {
-    height: auto;
     background-color: #333;
     padding: 30px;
     font-size: 85%;
 }
 
-.footer-links {
-    list-style: none;
-    text-align: right;
-}
-
-.footer-nav {
-    list-style: none;
-    text-align: right;
-}
-
-.social-links {
-    list-style: none;
-    text-align: right;
-    margin-bottom: 15px;
-}
-
-.footer-nav li,
-.social-links li {
-    margin-right: 20px;
-    display: inline;
-}
-
-.footer-links li:last-child,
-.footer-nav li:last-child,
-.social-links li:last-child { margin: none; }
-
-.footer-nav li a:link,
-.footer-nav li a:visited,
-.social-links li a:link,
-.social-links li a:visited{
-    text-decoration: none;
-    border: none;
-    color: #888;
-}
-
-.footer-nav li a:hover,
-.footer-nav li a:active{ color: #ddd; }
-
-
+/* CONTACT INFO */
 .contact-info {
     text-align: left;
-    float: left;
     list-style: none;
 }
 
@@ -260,7 +229,7 @@ footer {
 
 #title {
     color: #ccc;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     font-size: 120%;
     font-weight: 200;
 }
@@ -272,12 +241,45 @@ footer {
     text-align: left;
 }
 
-.social-links li a:link,
-.social-links li a:visited{ font-size: 150%; }
+/* FOOTER LINKS */
+.footer-links {
+    list-style: none;
+    text-align: right;
+}
 
-#logo-linkedin,
-#logo-instagram,
-#logo-github { -webkit-transition: color 0.2s; transition: color 0.2s; }
+.footer-links li {
+    margin-right: 20px;
+    display: inline;
+} 
+
+.footer-links li:last-child{ margin: none; }
+
+.footer-links a:hover { -webkit-transition: color 0.2s; transition: color 0.2s; }
+
+.footer-links li a:link,
+.footer-links li a:visited {
+    text-decoration: none;
+    border: none;
+    color: #888;
+}
+
+/* Footer navigation links */
+.footer-nav {
+    list-style: none;
+    text-align: right;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active{ color: #ddd; }
+
+/* Social logo links */
+.social-links {
+    list-style: none;
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.social-links li { font-size: 150%; }
 
 #logo-linkedin:hover { color: #0072b1; }
 
