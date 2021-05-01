@@ -1,4 +1,6 @@
-const url = "https://portfolio-server-side-mongodb.herokuapp.com/app.js";
+const BASE_URL = "https://portfolio-server-side-mongodb.herokuapp.com/";
+
+const MAIN_PAGE_DATA_URL = BASE_URL + "app.js";
 
 $('document').ready(
     function() {
@@ -10,7 +12,7 @@ $('document').ready(
 function provideMainPageData(){
     $.ajax({
         method: 'GET',
-        url: url + "?callback=?",
+        url: MAIN_PAGE_DATA_URL + "?callback=?",
         dataType: 'jsonp',
         success: function(data) {
             console.log('Successfully received data from server');
