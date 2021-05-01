@@ -1,4 +1,6 @@
-const url = "https://portfolio-server-side-mongodb.herokuapp.com/app.js";
+const BASE_URL = "https://portfolio-server-side-mongodb.herokuapp.com/";
+
+const MAIN_PAGE_DATA_URL = BASE_URL + "app.js";
 
 $('document').ready(
     function() {
@@ -10,7 +12,7 @@ $('document').ready(
 function provideMainPageData(){
     $.ajax({
         method: 'GET',
-        url: url + "?callback=?",
+        url: MAIN_PAGE_DATA_URL + "?callback=?",
         dataType: 'jsonp',
         success: function(data) {
             console.log('Successfully received data from server');
@@ -42,6 +44,8 @@ function provideMainPageData(){
 function populateDataToPage(data) {
     $('#top-link').html(data.full_name); 
     $('#frontInfoName').html(data.full_name); 
-    $('#frontInfoPosition').html(data.position); 
+    $('#frontInfoPosition').html(data.position);
     $('#intro_text').html(data.intro_text);
+    $('#personal-email').html("serapinasjokubas@gmail.com");
+    $('#work-email').html("jokubas@shapegames.com");
 }

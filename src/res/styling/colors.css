@@ -15,6 +15,16 @@
     --teritary_700: #47816e;
     --teritary_900: #345e50;
 
+    --grey_100: #fcfcfc;
+    --grey_150: #f9f9f9;
+    --grey_200: #f6f6f6;
+    --grey_300: #e8e8e8;
+    --grey_500: #b4b4b4;
+    --grey_600: #949494;
+    --grey_700: #727272;
+    --grey_800: #323232;
+    --grey_900: #252525;
+
     --black_10: rgba(0, 0, 0, 0.1);
     --black_30: rgba(0, 0, 0, 0.3);
     --black_50: rgba(0, 0, 0, 0.5);
