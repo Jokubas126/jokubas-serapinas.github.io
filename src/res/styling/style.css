@@ -54,6 +54,9 @@ th, td {
     padding: 0;
 }
 
+li:last-child,
+li:first-child { margin: none; }
+
 .testPar {
     height: 100px;
 }
@@ -209,9 +212,8 @@ section #introduction {
 /*------------------------------------------*/
 
 footer {
-    background-color: #333;
+    background-color: var(--grey_800);
     padding: 30px;
-    font-size: 85%;
 }
 
 /* CONTACT INFO */
@@ -221,23 +223,20 @@ footer {
 }
 
 .contact-info td {
-    font-size: 95%;
+    color: var(--grey_500);
     font-weight: 300;
-    color: #bbb;
-    margin-right: 20px;
 }
 
 #title {
-    color: #ccc;
+    color: var(--grey_500);
     padding-bottom: 5px;
-    font-size: 120%;
-    font-weight: 200;
+    font-size: x-large;
 }
 
 #personal-email,
 #work-email {
-    padding-left: 10px;
-    color: #999;
+    font-weight: 300;
+    color: var(--grey_600);
     text-align: left;
 }
 
@@ -248,34 +247,31 @@ footer {
 }
 
 .footer-links li {
-    margin-right: 20px;
+    margin-right: 15px;
     display: inline;
 } 
-
-.footer-links li:last-child{ margin: none; }
-
-.footer-links a:hover { -webkit-transition: color 0.2s; transition: color 0.2s; }
 
 .footer-links li a:link,
 .footer-links li a:visited {
     text-decoration: none;
     border: none;
-    color: #888;
+    color: var(--grey_600);
 }
 
+.footer-links a:hover { -webkit-transition: color 0.25s; transition: color 0.25s; }
+
 /* Footer navigation links */
-.footer-nav {
-    list-style: none;
-    text-align: right;
+
+.footer-nav li {
+    font-weight: 300;
+    font-size: large;
 }
 
 .footer-nav li a:hover,
-.footer-nav li a:active{ color: #ddd; }
+.footer-nav li a:active{ color: white; }
 
 /* Social logo links */
 .social-links {
-    list-style: none;
-    text-align: right;
     margin-bottom: 15px;
 }
 
@@ -283,6 +279,6 @@ footer {
 
 #logo-linkedin:hover { color: #0072b1; }
 
-#logo-instagram:hover { color: #4c68d7; }
+#logo-instagram:hover { color: #C13584; }
 
 #logo-github:hover { color: white; }
