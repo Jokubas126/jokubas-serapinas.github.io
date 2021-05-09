@@ -45,10 +45,6 @@ function populateLinks(socialMediaData) {
         let linkElement = $(listItem).find('a');
         $(linkElement).attr("id", item.ion_icon);
         $(linkElement).attr("href", item.link);
-        $(linkElement).click(
-            function() {
-                window.open(item.link, '_blank').focus();
-            }
-        );
+        $(linkElement).attr("target", "_blank")
     }
 }
