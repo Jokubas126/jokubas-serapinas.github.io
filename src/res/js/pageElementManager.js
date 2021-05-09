@@ -23,8 +23,10 @@ function populateTimelineList(timelineListData) {
         timeLineListContainer.append('<li></li>');
         let listItem = timeLineListContainer.find('li:last-child');
         listItem.load('src/components/timelineListItem.html', function(){
+            listItem.find(".timelineItemDate").html(item.date);
             listItem.find(".timelineItemTitle").html(item.title);
             listItem.find(".timelineItemDescription").html(item.description);
+            listItem.find("img").attr("src", item.image_link);
         });
     }
 };
