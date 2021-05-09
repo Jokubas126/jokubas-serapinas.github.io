@@ -4,33 +4,51 @@ let frontInfoPosition = $('#frontInfoPosition');
 let introText = $('#intro_text');
 let personalEmail = $('#personal-email');
 let workEmail = $('#work-email');
-let igIcon = $('#logo-instagram');
-let linkedinIcon = $('#logo-linkedin');
-let githubIcon = $('#logo-github');
+let socialLinkContainer = $('.social-links');
+
+let timeLineListContainer = $('.timeLineListContainer');
+let timeLineListItems = $('.timeLineListContainer li');
+
+const timelineListItemName = "timelineListItem";
 
 function populateDataToMainPage(data) {
     topLink.html(data.full_name); 
     frontInfoName.html(data.full_name); 
     frontInfoPosition.html(data.position);
     introText.html(data.intro_text);
-    personalEmail.html("serapinasjokubas@gmail.com");
-    workEmail.html("jokubas@shapegames.com");
+    personalEmail.html(data.contacts.personal_email);
+    workEmail.html(data.contacts.work_email);
+    populateTimelineList(data.timeline_items);
+    populateLinks(data.social_media_items);
 }
 
-function populateLinks(linkData) {
-    igIcon.click(
-        function(){
-            window.open("https://www.instagram.com/jokubass7/?hl=en", '_blank').focus();
-        }
-    );
-    linkedinIcon.click(
-        function() {
-            window.open("https://www.linkedin.com/in/jokubas-serapinas", '_blank').focus();
-        }
-    );
-    githubIcon.click(
-        function() {
-            window.open("https://github.com/Jokubas126", '_blank').focus();
-        }
-    );
+function populateTimelineList(timelineListData) {
+    for(let item of timelineListData) {   
+        timeLineListContainer.append('<li></li>');
+        let listItem = timeLineListContainer.find('li:last-child');
+        listItem.load('src/components/timelineListItem.html', function(){
+            listItem.find("h4").html(item.title);
+            listItem.find("p").html(item.description);
+        });
+    }
+};
+
+function populateLinks(socialMediaData) {
+    for(let item of socialMediaData) {
+        
+        socialLinkContainer.append('<li><a><ion-icon></ion-icon></a></li>');
+        let listItem = socialLinkContainer.find('li:last-child');
+
+        let icon = $(listItem).find('ion-icon');
+        $(icon).attr("name", item.ion_icon);
+
+        let linkElement = $(listItem).find('a');
+        $(linkElement).attr("id", item.ion_icon);
+        $(linkElement).attr("href", item.link);
+        $(linkElement).click(
+            function() {
+                window.open(item.link, '_blank').focus();
+            }
+        );
+    }
 }
