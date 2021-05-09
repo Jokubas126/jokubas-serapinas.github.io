@@ -18,18 +18,21 @@ function populateDataToMainPage(data) {
     frontInfoName.html(data.full_name); 
     frontInfoPosition.html(data.position);
     introText.html(data.intro_text);
-    personalEmail.html("serapinasjokubas@gmail.com");
-    workEmail.html("jokubas@shapegames.com");
-    populateTimelineList(data);
+    personalEmail.html(data.contacts.personal_email);
+    workEmail.html(data.contacts.work_email);
+    populateTimelineList(data.timeline_items);
 }
 
-function populateTimelineList(data) {
-    timeLineListItems.each(function(i, item) {
-        let listItem = $(item);
-        listItem.load('src/components/timelineListItem.html', function(){
-            listItem.find("h4").html("Title text provided with JS: " + i);
-            listItem.find("p").html("This is the description for the item: " + i);
-        });
+function populateTimelineList(timelineListData) {
+    // TODO: add li items based on amount of timelineListData length
+    timeLineListItems.each(function(i, item) { 
+        if (i < timelineListData.length) {
+            let listItem = $(item);
+            listItem.load('src/components/timelineListItem.html', function(){
+                listItem.find("h4").html(timelineListData[i].title);
+                listItem.find("p").html(timelineListData[i].description);
+            });
+        }
     }) 
 };
 
