@@ -208,6 +208,62 @@ section #introduction {
 }
 
 /*------------------------------------------*/
+/* TIMELINE */
+/*------------------------------------------*/
+
+.timeLineListContainer li {
+    margin: auto;
+    list-style: none;
+    font-weight: 300;
+    font-size: large;
+    margin-top: 50px;
+    width: 80%;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    -webkit-transition: 0.25s; 
+    transition: 0.25s;
+    border-radius: 15px;
+  }
+  
+  .card:hover {
+    box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+  }
+  
+  .timelineListItem {
+    padding: 28px;
+  }
+
+  .timelineListItem:first-child {
+      text-align: right;
+  }
+
+  .timelineListItem img {
+    width: 50%;
+    margin: auto;
+    text-align: right;
+  }
+
+  .timelineListItem .text {
+    text-align: left;
+    margin-right: 20px;
+    color: var(--tetriary_900);
+ }
+
+  .timelineListItem .text h4 {
+    font-size: xx-large;
+    font-weight: 500;
+  }
+
+  .timelineListItem .text p {
+    margin-top: 16px;
+    font-size: large;
+    font-weight: 300;
+  }
+
+
+/*------------------------------------------*/
 /* FOOTER */
 /*------------------------------------------*/
 
