@@ -20,35 +20,17 @@ function populateDataToMainPage(data) {
     introText.html(data.intro_text);
     personalEmail.html("serapinasjokubas@gmail.com");
     workEmail.html("jokubas@shapegames.com");
-    populateTimelineList();
+    populateTimelineList(data);
 }
 
-function populateTimelineList(){
-    includeTimelineListItem();
-
-    // add data to the list
-}
-
-function includeTimelineListItem() {
-    let allElements = document.getElementsByTagName("*");
-    for (let element of allElements) {
-        let listItem = element.getAttribute(timelineListItemName);
-        if (listItem) {
-            let xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4) {
-                    if (this.status == 200) {element.innerHTML = this.responseText;}
-                    if (this.status == 404) {element.innerHTML = "HTML component not found.";}
-                    /*remove the attribute, and call this function once more:*/
-                    element.removeAttribute(timelineListItemName);
-                    includeTimelineListItem();
-                }
-            }
-            xhttp.open("GET", listItem, true);
-            xhttp.send();
-            return;
-        }
-    }
+function populateTimelineList(data) {
+    timeLineListItems.each(function(i, item) {
+        let listItem = $(item);
+        listItem.load('src/components/timelineListItem.html', function(){
+            listItem.find("h4").html("Title text provided with JS: " + i);
+            listItem.find("p").html("This is the description for the item: " + i);
+        });
+    }) 
 };
 
 function populateLinks(linkData) {
