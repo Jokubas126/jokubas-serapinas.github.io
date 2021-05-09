@@ -46,7 +46,7 @@ function populateLinks(socialMediaData) {
         $(linkElement).attr("id", item.ion_icon);
         $(linkElement).attr("href", item.link);
         $(linkElement).click(
-            function(){
+            function() {
                 window.open(item.link, '_blank').focus();
             }
         );
