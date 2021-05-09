@@ -245,7 +245,8 @@ section #introduction {
 
   .timelineListItem img {
     width: 50%;
-    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
     text-align: right;
   }
 
@@ -255,12 +256,18 @@ section #introduction {
     color: var(--tetriary_900);
  }
 
-  .timelineListItem .text h4 {
-    font-size: xx-large;
-    font-weight: 500;
+ .timelineItemDate {
+    font-size: large;
+    font-weight: 400;
   }
 
-  .timelineListItem .text p {
+ .timelineItemTitle {
+    font-size: xx-large;
+    font-weight: 500;
+    margin-top: 8px;
+  }
+
+  .timelineItemDescription {
     margin-top: 16px;
     font-size: large;
     font-weight: 300;
