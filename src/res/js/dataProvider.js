@@ -6,7 +6,6 @@ $('document').ready(
     function() {
         console.log("Data provider is ready");
         provideMainPageData();
-        provideLinkData();
     }
 );
 
@@ -30,7 +29,7 @@ var errorFunction = function (jqXHR, exception) {
     console.log(msg);
 }
 
-function provideMainPageData(){
+function provideMainPageData() {
     $.ajax({
         method: 'GET',
         url: BASE_URL + MAIN_PAGE_QUERY + "?callback=?",
@@ -38,19 +37,6 @@ function provideMainPageData(){
         success: function(data) {
             console.log("Received data type: " + data.data_type);
             populateDataToMainPage(data);
-        },
-        error: errorFunction
-    })
-}
-
-function provideLinkData(){
-    $.ajax({
-        method: 'GET',
-        url: BASE_URL + MAIN_PAGE_QUERY + "?callback=?",
-        dataType: 'jsonp',
-        success: function(linkData) {
-            console.log("Received data type: " + linkData.data_type);
-            populateLinks(linkData);
         },
         error: errorFunction
     })
