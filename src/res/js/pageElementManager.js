@@ -5,11 +5,7 @@ let introText = $('#intro_text');
 let personalEmail = $('#personal-email');
 let workEmail = $('#work-email');
 let socialLinkContainer = $('.social-links');
-
 let timeLineListContainer = $('.timeLineListContainer');
-let timeLineListItems = $('.timeLineListContainer li');
-
-const timelineListItemName = "timelineListItem";
 
 function populateDataToMainPage(data) {
     topLink.html(data.full_name); 
@@ -23,12 +19,14 @@ function populateDataToMainPage(data) {
 }
 
 function populateTimelineList(timelineListData) {
-    for(let item of timelineListData) {   
+    for(let item of timelineListData) {
         timeLineListContainer.append('<li></li>');
         let listItem = timeLineListContainer.find('li:last-child');
         listItem.load('src/components/timelineListItem.html', function(){
-            listItem.find("h4").html(item.title);
-            listItem.find("p").html(item.description);
+            listItem.find(".timelineItemDate").html(item.date);
+            listItem.find(".timelineItemTitle").html(item.title);
+            listItem.find(".timelineItemDescription").html(item.description);
+            listItem.find("img").attr("src", item.image_link);
         });
     }
 };
