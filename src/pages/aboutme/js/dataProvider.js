@@ -5,7 +5,7 @@ const MAIN_PAGE_QUERY = "app.js";
 $('document').ready(
     function() {
         console.log("Data provider is ready");
-        provideMainPageData();
+        providePageData();
     }
 );
 
@@ -29,14 +29,14 @@ var errorFunction = function (jqXHR, exception) {
     console.log(msg);
 }
 
-function provideMainPageData() {
+function providePageData() {
     $.ajax({
         method: 'GET',
         url: BASE_URL + MAIN_PAGE_QUERY + "?callback=?",
         dataType: 'jsonp',
         success: function(data) {
             console.log("Received data type: " + data.data_type);
-            populateDataToMainPage(data);
+            populateDataToAboutMePage(data);
         },
         error: errorFunction
     })

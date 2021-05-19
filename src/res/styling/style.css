@@ -15,7 +15,7 @@ html,
 body {
     background-color: white;
     color: #575757;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato';
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
@@ -58,7 +58,7 @@ li:last-child,
 li:first-child { margin: none; }
 
 .testPar {
-    height: 100px;
+    height: 500px;
 }
 
 /*------------------------------------------*/
@@ -71,13 +71,15 @@ div.paragraphHeaderContainer {
     height: 150px;
     background-size: cover;
     background-attachment: fixed;
-    background-position: center;
+    background-position: center; 
 }
 
 div h1.paragraphHeader {
     color: white;
     position: relative;
     text-align: center;
+    margin: none;
+    padding: none; 
     font-weight: 200;
     font-size: 50px;
     top: 50%;
@@ -194,86 +196,6 @@ header #frontInfo {
 .sticky .main-nav a:active {
     border-bottom: 1px solid var(--teritary_700);
 }
-
-/*------------------------------------------*/
-/* INTRODUCTION */
-/*------------------------------------------*/
-
-section #introduction {
-    margin-left: 100px;
-    text-align: left;
-    color: var(--teritary_700); 
-    font-weight: 300;
-    font-size: 26px;
-}
-
-/*------------------------------------------*/
-/* TIMELINE */
-/*------------------------------------------*/
-
-.timeLineListContainer li {
-    margin: auto;
-    list-style: none;
-    font-weight: 300;
-    font-size: large;
-    margin-top: 50px;
-    width: 80%;
-}
-
-.timeLineListContainer li:last-child {
-    margin-bottom: 50px;
-}
-
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    -webkit-transition: 0.25s; 
-    transition: 0.25s;
-    border-radius: 15px;
-  }
-  
-  .card:hover {
-    box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
-  }
-  
-  .timelineListItem {
-    padding: 28px;
-  }
-
-  .timelineListItem:first-child {
-      text-align: right;
-  }
-
-  .timelineListItem img {
-    width: 30%;
-    height: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    text-align: right;
-  }
-
-  .timelineListItem .text {
-    text-align: left;
-    margin-right: 20px;
-    color: var(--tetriary_900);
- }
-
- .timelineItemDate {
-    font-size: large;
-    font-weight: 400;
-  }
-
- .timelineItemTitle {
-    font-size: xx-large;
-    font-weight: 500;
-    margin-top: 8px;
-  }
-
-  .timelineItemDescription {
-    margin-top: 16px;
-    font-size: 21px;
-    font-weight: 300;
-  }
-
 
 /*------------------------------------------*/
 /* FOOTER */

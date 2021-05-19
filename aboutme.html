@@ -1,50 +1,31 @@
 <html>
     <head>
         <title>Portfolio</title>
-        <link rel="stylesheet" type="text/css" href="src/res/styling/normalize.css">
+        <!-- <link rel="stylesheet" type="text/css" href="src/res/styling/normalize.css"> -->
         <link rel="stylesheet" type="text/css" href="src/res/styling/queries.css">
         <link rel="stylesheet" type="text/css" href="src/res/styling/colors.css">
-        <link rel="stylesheet" type="text/css" href="src/res/styling/style.css">
-        <link rel="stylesheet" type="text/css" href="src/pages/main/styles/style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap&subset=latin-ext" rel="stylesheet">    
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap&subset=latin-ext" rel="stylesheet">   
+        <link rel="stylesheet" type="text/css" href="src/res/styling/style.css">
+        <link rel="stylesheet" type="text/css" href="src/pages/aboutme/styles/style.css"> 
     </head>
-    
-        <body>
-
-        <header>
-            <nav class="stickyTransparent">
-                <div class="row">
-                    <div class="main-nav ">
-                        <a id="top-link" href="index.html"></a>  
-                        <a href="aboutme.html">About me</a>   
-                        <a href="#">Portfolio</a>
-                    </div>
+    <body>
+        <nav class="stickyTransparent">
+            <div class="row">
+                <div class="main-nav ">
+                    <a id="top-link" href="index.html"></a>  
+                    <a href="aboutme.html">About me</a>   
+                    <a href="#">Portfolio</a>
                 </div>
-            </nav>
+            </div>
+        </nav>
 
-            <div id="frontInfo">
-                <img class="profile_picture" alt='Profile picture' >
-                <p id="frontInfoName"></p>
-                <p id="frontInfoPosition"></p>
-            </div>
-        </header>
+        <div class="paragraphHeaderContainer">
+            <h1 class="paragraphHeader">About me</h1>
+        </div>
+        <div><p>About me page</p></div>
 
-        <section class="sectionIntroduction">
-            <div id="introduction" >
-                <p style="font-weight: 400;">Hey!</p>
-                <p id="intro_text"></p>
-            </div>
-        </section>
-        
-        <section>
-            <div>
-                <div class="paragraphHeaderContainer" >
-                    <h1 class="paragraphHeader">Timeline</h1>
-                </div>
-                <div><ul class="timeLineListContainer"></ul></div>
-            </div>
-        </section>
+        <section class="testPar"></section>
         
         <footer>
             <div class="row">
@@ -81,7 +62,7 @@
         <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
         <script src="src/res/js/jquery-waypoints.js"></script>
-        <script src="src/pages/main/js/pageElementManager.js"></script>
-        <script src="src/pages/main/js/dataProvider.js"></script>
+        <script src="src/pages/aboutme/js/pageElementManager.js"></script>
+        <script src="src/pages/aboutme/js/dataProvider.js"></script>
     </body>
 </html>

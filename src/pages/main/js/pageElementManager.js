@@ -8,7 +8,7 @@ let workEmail = $('#work-email');
 let socialLinkContainer = $('.social-links');
 let timeLineListContainer = $('.timeLineListContainer');
 
-function populateDataToMainPage(data) {
+function populateDataToPage(data) {
     topLink.html(data.full_name); 
     frontInfoProfileImg.attr("src", data.profile_imame_link);
     frontInfoName.html(data.full_name); 
@@ -48,3 +48,26 @@ function populateLinks(socialMediaData) {
         $(linkElement).attr("target", "_blank")
     }
 }
+
+$('document').ready(
+    function() {
+        console.log("Ready");
+        observeHeader();
+    }
+);
+
+function observeHeader() {
+    $('.sectionIntroduction').waypoint(
+        function(direction) {
+            if (direction == "down") {
+                $('nav').removeClass('stickyTransparent');
+                $('nav').addClass('sticky');
+                console.log("Sticky");
+            } else {
+                $('nav').removeClass('sticky');
+                $('nav').addClass('stickyTransparent');
+                console.log("Transparent");
+            }
+        }
+    );
+} 
