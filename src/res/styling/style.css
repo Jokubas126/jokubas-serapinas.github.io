@@ -244,9 +244,8 @@ section #introduction {
   }
 
   .timelineListItem img {
-    min-width: 30%;
-    max-width: 50%;
-    max-height: 450px;
+    width: 40%;
+    height: auto;
     margin-top: auto;
     margin-bottom: auto;
     text-align: right;
