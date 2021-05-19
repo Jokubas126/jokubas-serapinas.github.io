@@ -1,4 +1,5 @@
 let topLink = $('#top-link'); 
+let frontInfoProfileImg = $('#frontInfo .profile_picture');
 let frontInfoName = $('#frontInfoName'); 
 let frontInfoPosition = $('#frontInfoPosition');
 let introText = $('#intro_text');
@@ -9,6 +10,7 @@ let timeLineListContainer = $('.timeLineListContainer');
 
 function populateDataToMainPage(data) {
     topLink.html(data.full_name); 
+    frontInfoProfileImg.attr("src", data.profile_imame_link);
     frontInfoName.html(data.full_name); 
     frontInfoPosition.html(data.position);
     introText.html(data.intro_text);
