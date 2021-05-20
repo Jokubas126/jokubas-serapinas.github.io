@@ -1,23 +1,17 @@
-let topLink = $('#top-link'); 
+let stickyNavWaypoint = $('.sectionIntroduction');
+
 let frontInfoProfileImg = $('#frontInfo .profile_picture');
 let frontInfoName = $('#frontInfoName'); 
 let frontInfoPosition = $('#frontInfoPosition');
 let introText = $('#intro_text');
-let personalEmail = $('#personal-email');
-let workEmail = $('#work-email');
-let socialLinkContainer = $('.social-links');
 let timeLineListContainer = $('.timeLineListContainer');
 
-function populateDataToPage(data) {
-    topLink.html(data.full_name); 
-    frontInfoProfileImg.attr("src", data.profile_imame_link);
+function populateDataToMainPage(data) {
+    frontInfoProfileImg.attr("src", data.profile_image_link);
     frontInfoName.html(data.full_name); 
     frontInfoPosition.html(data.position);
     introText.html(data.intro_text);
-    personalEmail.html(data.contacts.personal_email);
-    workEmail.html(data.contacts.work_email);
     populateTimelineList(data.timeline_items);
-    populateLinks(data.social_media_items);
 }
 
 function populateTimelineList(timelineListData) {
@@ -33,22 +27,6 @@ function populateTimelineList(timelineListData) {
     }
 };
 
-function populateLinks(socialMediaData) {
-    for(let item of socialMediaData) {
-        
-        socialLinkContainer.append('<li><a><ion-icon></ion-icon></a></li>');
-        let listItem = socialLinkContainer.find('li:last-child');
-
-        let icon = $(listItem).find('ion-icon');
-        $(icon).attr("name", item.ion_icon);
-
-        let linkElement = $(listItem).find('a');
-        $(linkElement).attr("id", item.ion_icon);
-        $(linkElement).attr("href", item.link);
-        $(linkElement).attr("target", "_blank")
-    }
-}
-
 $('document').ready(
     function() {
         console.log("Ready");
@@ -57,17 +35,5 @@ $('document').ready(
 );
 
 function observeHeader() {
-    $('.sectionIntroduction').waypoint(
-        function(direction) {
-            if (direction == "down") {
-                $('nav').removeClass('stickyTransparent');
-                $('nav').addClass('sticky');
-                console.log("Sticky");
-            } else {
-                $('nav').removeClass('sticky');
-                $('nav').addClass('stickyTransparent');
-                console.log("Transparent");
-            }
-        }
-    );
+    stickyNavWaypoint.waypoint(stickyHeaderSwitcher);
 } 
