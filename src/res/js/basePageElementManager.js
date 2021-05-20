@@ -1,6 +1,5 @@
 let mainNavContainer = $('.main-nav');
 let footerNavContainer = $('.footer-nav');
-let topLink = $('#top-link'); 
 let personalEmail = $('#personal-email');
 let workEmail = $('#work-email');
 let socialLinkContainer = $('.social-links');
@@ -29,7 +28,8 @@ function populateLinks(socialMediaData) {
 }
 
 function populateNav(fullName) {
-    topLink.html(fullName); 
+    mainNavContainer.append('<a id="top-link" href="index.html"></a>');
+    $('#top-link').html(fullName); 
     mainNavContainer.append('<a href="aboutme.html">About me</a>');
     mainNavContainer.append('<a href="portfolio.html">Portfolio</a>');
     footerNavContainer.append('<li><a href="portfolio.html">Portfolio</a></li>');
