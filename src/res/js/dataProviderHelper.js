@@ -1,3 +1,7 @@
+const BASE_URL = "https://portfolio-server-side-mongodb.herokuapp.com/";
+
+const MAIN_PAGE_QUERY = "app.js";
+
 let errorFunction = function (jqXHR, exception) {
     var msg = '';
     if (jqXHR.status === 0) {
