@@ -57,8 +57,19 @@ th, td {
 li:last-child,
 li:first-child { margin: none; }
 
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    -webkit-transition: 0.25s; 
+    transition: 0.25s;
+    border-radius: 15px;
+  }
+  
+  .card:hover {
+    box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+  }
+
 .testPar {
-    height: 500px;
+    height: 1000px;
 }
 
 /*------------------------------------------*/

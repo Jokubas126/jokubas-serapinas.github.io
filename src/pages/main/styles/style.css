@@ -23,58 +23,48 @@ section #introduction {
     font-size: large;
     margin-top: 50px;
     width: 80%;
+    max-width: 1000px;
 }
 
 .timeLineListContainer li:last-child {
     margin-bottom: 50px;
 }
-
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    -webkit-transition: 0.25s; 
-    transition: 0.25s;
-    border-radius: 15px;
-  }
   
-  .card:hover {
-    box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
-  }
-  
-  .timelineListItem {
-    padding: 28px;
-  }
+.timelineListItem {
+  padding: 28px;
+}
 
-  .timelineListItem:first-child {
-      text-align: right;
-  }
-
-  .timelineListItem img {
-    width: 30%;
-    height: auto;
-    margin-top: auto;
-    margin-bottom: auto;
+.timelineListItem:first-child {
     text-align: right;
-  }
+}
 
-  .timelineListItem .text {
-    text-align: left;
-    margin-right: 20px;
-    color: var(--tetriary_900);
- }
+.timelineListItem img {
+  width: 30%;
+  height: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: right;
+}
 
- .timelineItemDate {
-    font-size: large;
-    font-weight: 400;
-  }
+.timelineListItem .text {
+  text-align: left;
+  margin-right: 20px;
+  color: var(--tetriary_900);
+}
 
- .timelineItemTitle {
-    font-size: xx-large;
-    font-weight: 500;
-    margin-top: 8px;
-  }
+.timelineItemDate {
+  font-size: large;
+  font-weight: 400;
+}
 
-  .timelineItemDescription {
-    margin-top: 16px;
-    font-size: 21px;
-    font-weight: 300;
-  }
+.timelineItemTitle {
+  font-size: xx-large;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.timelineItemDescription {
+  margin-top: 16px;
+  font-size: 21px;
+  font-weight: 300;
+}
