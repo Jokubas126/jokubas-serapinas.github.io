@@ -23,6 +23,7 @@ section #introduction {
     font-size: large;
     margin-top: 50px;
     width: 80%;
+    max-width: 1000px;
 }
 
 .timeLineListContainer li:last-child {
