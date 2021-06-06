@@ -1,4 +1,4 @@
-let stickyNavWaypoint = $('.sectionIntroduction');
+let stickyNavWaypoint = $('#sectionIntroduction');
 
 let frontInfoProfileImg = $('#frontInfo .profile_picture');
 let frontInfoName = $('#frontInfoName'); 
