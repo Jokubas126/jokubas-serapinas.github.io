@@ -30,29 +30,16 @@ section #introduction {
   margin-bottom: 50px;
 }
 
-.portfolioItem {
-  padding: 28px;
-}
-
-.portfolioItem:first-child {
-  text-align: right;
-}
-
-.portfolioItem .text {
-  text-align: left;
-  margin-right: 20px;
-  color: var(--tetriary_900);
-}
-
-.portfolioItemDate {
-  font-size: large;
-  font-weight: 400;
+.portfolioItemTitle,
+.portfolioItemDescription {
+  margin-left: 28px;
+  margin-right: 28px;
 }
 
 .portfolioItemTitle {
   font-size: xx-large;
   font-weight: 500;
-  margin-top: 8px;
+  margin-top: 28px;
 }
 
 .portfolioItemDescription {
@@ -60,7 +47,6 @@ section #introduction {
   font-size: 21px;
   font-weight: 300;
 }
-  
 /* Image list */
 
 #portfolioImageList {
