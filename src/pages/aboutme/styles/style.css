@@ -1,0 +1,49 @@
+#aboutMeContainer {
+    color: var(--teritary_900);
+}
+
+#aboutMeContainer li {
+    margin: auto;
+    list-style: none;
+    font-weight: 300;
+    font-size: large;
+    margin-top: 50px;
+    width: 80%;
+    max-width: 1000px;
+}
+
+#aboutMeContainer li:last-child {
+    margin-bottom: 50px;
+}
+
+.aboutMeItemCategory {
+    margin: none;
+}
+
+.aboutMeItem img {
+    width: auto;
+    height: fit-content;
+    max-width: 35%;
+    border-radius: 10px;
+    align-self: center;
+}
+
+#aboutMeContent {
+    margin: 28px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#aboutMeTitle {
+    font-size: x-large; 
+    font-weight: 400;
+}
+
+#aboutMeContent p {
+    margin-bottom: 8px;
+}
+
+#aboutMeCategoryTitle {
+    font-size: x-large;
+    text-align: center;
+}
