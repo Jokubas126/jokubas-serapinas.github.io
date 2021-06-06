@@ -44,7 +44,7 @@ section #introduction {
 
 .portfolioItemDescription {
   margin-top: 16px;
-  font-size: 21px;
+  font-size: larger;
   font-weight: 300;
 }
 /* Image list */
@@ -73,6 +73,13 @@ section #introduction {
   display: inline;  
   z-index: 9999;
 }
+
+@media only screen and (max-width: 480px) {
+  .portfolioContainer li {
+    text-align: center;
+  }
+}
+
 
 #portfolioImageList li img {
   list-style: none;
