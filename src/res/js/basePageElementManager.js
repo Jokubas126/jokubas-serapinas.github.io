@@ -1,19 +1,13 @@
 let mainNavContainer = $('.main-nav');
-let footerNavContainer = $('.footer-nav');
-let personalEmail = $('#personal-email');
-let workEmail = $('#work-email');
-let socialLinkContainer = $('.social-links');
 
 function populateBaseDataToPage(data) {
-    personalEmail.html(data.contacts.personal_email);
-    workEmail.html(data.contacts.work_email);
-    populateLinks(data.social_media_items);
+    populateFooter(data)
     populateNav(data.full_name);
 }
 
 function populateLinks(socialMediaData) {
     for(let item of socialMediaData) {
-        
+        let socialLinkContainer = $('.social-links');
         socialLinkContainer.append('<li><a><ion-icon></ion-icon></a></li>');
         let listItem = socialLinkContainer.find('li:last-child');
 
@@ -27,13 +21,23 @@ function populateLinks(socialMediaData) {
     }
 }
 
+function populateFooter(data) {
+    $('#content').append(' <footer></footer>');
+    $('footer').load('src/components/footer.html', function() {
+        let footerNavContainer = $('.footer-nav');
+        footerNavContainer.append('<li><a href="portfolio.html">Portfolio</a></li>');
+        footerNavContainer.append('<li><a href="aboutme.html">About me</a></li>');
+        $('#personal-email').html(data.contacts.personal_email);
+        $('#work-email').html(data.contacts.work_email);
+        populateLinks(data.social_media_items);
+    });
+}
+
 function populateNav(fullName) {
     mainNavContainer.append('<a id="top-link" href="index.html"></a>');
     $('#top-link').html(fullName); 
     mainNavContainer.append('<a href="portfolio.html">Portfolio</a>');
     mainNavContainer.append('<a href="aboutme.html">About me</a>');
-    footerNavContainer.append('<li><a href="portfolio.html">Portfolio</a></li>');
-    footerNavContainer.append('<li><a href="aboutme.html">About me</a></li>');
 }
 
 let stickyHeaderSwitcher = function(direction) {

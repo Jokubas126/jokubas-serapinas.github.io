@@ -22,22 +22,13 @@ body {
     overflow-x: hidden;
 }
 
-.clearfix {zoom: 1}
-.clearfix:after {
-    content: '.';
-    clear: both;
-    display: block;
-    height: 0;
-    visibility: hidden;
-}
-
 
 /*--------------------------------------------*/
 /* REUSABLE COMPONENTS */
 /*--------------------------------------------*/
 
 .row {
-    margin: 0 auto;
+    margin: 0;
     display: flex;
     justify-content: space-between;
 }
@@ -58,15 +49,15 @@ li:last-child,
 li:first-child { margin: none; }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    -webkit-transition: 0.25s; 
-    transition: 0.25s;
-    border-radius: 15px;
-  }
-  
-  .card:hover {
-    box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
-  }
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+-webkit-transition: 0.25s; 
+transition: 0.25s;
+border-radius: 15px;
+}
+
+.card:hover {
+box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+}
 
 .testPar {
     height: 1000px;

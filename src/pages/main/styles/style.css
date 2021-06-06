@@ -4,13 +4,17 @@
 /* INTRODUCTION */
 /*------------------------------------------*/
 
-section #introduction {
+#sectionIntroduction {
     margin: 0 100px;
     text-align: left;
     color: var(--teritary_700); 
     font-weight: 300;
     font-size: 26px;
     max-width: 1000px;
+}
+
+#introTitle {
+  font-weight: 400;
 }
 
 /*------------------------------------------*/
@@ -31,17 +35,11 @@ section #introduction {
     margin-bottom: 50px;
 }
 
-.timelineListItem:first-child {
-    text-align: right;
-}
-
 .timelineListItem img {
-  width: 30%;
-  height: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-  text-align: right;
-  border-radius: 0 10px 10px 0;
+  width: auto;
+  width: 35%;
+  border-radius: 10px;
+  margin: auto;
 }
 
 .timelineListItem .text {
