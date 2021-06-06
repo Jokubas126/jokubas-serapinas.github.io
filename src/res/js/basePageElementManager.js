@@ -30,8 +30,8 @@ function populateLinks(socialMediaData) {
 function populateNav(fullName) {
     mainNavContainer.append('<a id="top-link" href="index.html"></a>');
     $('#top-link').html(fullName); 
-    mainNavContainer.append('<a href="aboutme.html">About me</a>');
     mainNavContainer.append('<a href="portfolio.html">Portfolio</a>');
+    mainNavContainer.append('<a href="aboutme.html">About me</a>');
     footerNavContainer.append('<li><a href="portfolio.html">Portfolio</a></li>');
     footerNavContainer.append('<li><a href="aboutme.html">About me</a></li>');
 }
