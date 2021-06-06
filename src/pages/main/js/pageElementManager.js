@@ -3,14 +3,16 @@ let stickyNavWaypoint = $('.sectionIntroduction');
 let frontInfoProfileImg = $('#frontInfo .profile_picture');
 let frontInfoName = $('#frontInfoName'); 
 let frontInfoPosition = $('#frontInfoPosition');
-let introText = $('#intro_text');
+let introTitle = $('#introTitle');
+let introDescription = $('#introDescription');
 let timeLineListContainer = $('.timeLineListContainer');
 
 function populateDataToMainPage(data) {
     frontInfoProfileImg.attr("src", data.profile_image_link);
     frontInfoName.html(data.full_name); 
     frontInfoPosition.html(data.position);
-    introText.html(data.intro_text);
+    introTitle.html(data.introduction.title);
+    introDescription.html(data.introduction.description);
     populateTimelineList(data.timeline_items);
 }
 

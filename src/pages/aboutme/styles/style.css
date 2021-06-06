@@ -16,17 +16,47 @@
     margin-bottom: 50px;
 }
 
-.aboutMeItemCategory {
-    margin: none;
-}
-
-.aboutMeItem img {
+.aboutMeItemOdd img,
+.aboutMeItemEven img {
     width: auto;
-    height: max-content;
+    height: auto;
     max-width: 45%;
     min-width: 35%;
-    border-radius: 10px;
-    align-self: center;
+    margin: auto;
+}
+
+.aboutMeItemOdd img {
+    border-radius: 10px 0 0 10px;
+}
+
+.aboutMeItemEven img {
+    border-radius: 0 10px 10px 0;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .aboutMeItemOdd img,
+    .aboutMeItemEven img  {
+        border-radius: 10px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .aboutMeItemOdd img,
+    .aboutMeItemEven img  {
+        width: 75%;
+        max-width: 75%;
+        margin: auto;
+        align-self: center;
+        text-align: center;
+    }
+
+    .aboutMeItemEven img  {
+        margin-top: 0px;
+    }
+    
+    .aboutMeItemOdd img {
+        margin-bottom: 0px;
+    }
 }
 
 #aboutMeContent {
