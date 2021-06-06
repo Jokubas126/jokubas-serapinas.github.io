@@ -17,6 +17,15 @@
   font-weight: 400;
 }
 
+@media only screen and (max-width: 480px) {
+
+  #sectionIntroduction {
+    margin: 0 28px;
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
 /*------------------------------------------*/
 /* TIMELINE */
 /*------------------------------------------*/
@@ -24,8 +33,6 @@
 .timeLineListContainer li {
     margin: auto;
     list-style: none;
-    font-weight: 300;
-    font-size: large;
     margin-top: 50px;
     width: 80%;
     max-width: 1000px;
@@ -38,13 +45,15 @@
 .timelineListItem img {
   width: auto;
   width: 35%;
-  border-radius: 10px;
+  border-radius: 0 10px 10px 0;
   margin: auto;
 }
 
 .timelineListItem .text {
   margin: 28px;
+  font-weight: 300;
   text-align: left;
+  font-size: large;
   color: var(--tetriary_900);
 }
 
@@ -61,6 +70,41 @@
 
 .timelineItemDescription {
   margin-top: 16px;
-  font-size: 21px;
+  font-size: larger;
   font-weight: 300;
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .timelineListItem img {
+      border-radius: 10px;
+  }
+}
+@media only screen and (max-width: 480px) {
+
+  .timelineListItem .text {
+    margin: 10px;
+    text-align: center;
+    font-size: medium;
+  }
+
+  .timelineItemTitle {
+    font-size: x-large;
+  }
+
+  .timelineListItem img {
+      width: 75%;
+      max-width: 75%;
+      margin: auto;
+      align-self: center;
+      text-align: center;
+  }
+
+  .aboutMeItemEven img  {
+      margin-top: 0px;
+  }
+  
+  .aboutMeItemOdd img {
+      margin-bottom: 0px;
+  }
 }
