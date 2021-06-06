@@ -5,11 +5,12 @@
 /*------------------------------------------*/
 
 section #introduction {
-    margin-left: 100px;
+    margin: 0 100px;
     text-align: left;
     color: var(--teritary_700); 
     font-weight: 300;
     font-size: 26px;
+    max-width: 1000px;
 }
 
 /*------------------------------------------*/
@@ -29,10 +30,6 @@ section #introduction {
 .timeLineListContainer li:last-child {
     margin-bottom: 50px;
 }
-  
-.timelineListItem {
-  padding: 28px;
-}
 
 .timelineListItem:first-child {
     text-align: right;
@@ -44,11 +41,12 @@ section #introduction {
   margin-top: auto;
   margin-bottom: auto;
   text-align: right;
+  border-radius: 0 10px 10px 0;
 }
 
 .timelineListItem .text {
+  margin: 28px;
   text-align: left;
-  margin-right: 20px;
   color: var(--tetriary_900);
 }
 
