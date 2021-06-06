@@ -22,8 +22,9 @@
 
 .aboutMeItem img {
     width: auto;
-    height: fit-content;
-    max-width: 35%;
+    height: max-content;
+    max-width: 45%;
+    min-width: 35%;
     border-radius: 10px;
     align-self: center;
 }
