@@ -40,14 +40,23 @@
         border-radius: 10px;
     }
 }
+
+@media only screen and (max-width: 767px) {
+    .aboutMeItemOdd img,
+    .aboutMeItemEven img {
+      width: 50%;
+      max-width: 50%;
+      margin: auto;
+      align-self: center;
+      text-align: center;
+  }
+}
+
 @media only screen and (max-width: 480px) {
     .aboutMeItemOdd img,
     .aboutMeItemEven img  {
         width: 75%;
         max-width: 75%;
-        margin: auto;
-        align-self: center;
-        text-align: center;
     }
 
     .aboutMeItemEven img  {
