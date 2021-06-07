@@ -1,5 +1,16 @@
 let contentContainer = $('#content');
 
+const portfolioNavElement = '<a href="portfolio.html">Portfolio</a>';
+const aboutMeNavElement = '<a href="aboutme.html">About me</a>';
+
+function mainPageNavElement(string, isTopLink) {
+    let element;
+    if (isTopLink) {
+        element = '<a class="top-link" href="index.html">' + string + '</a>'
+    } else element = '<a href="index.html">' + string + '</a>' 
+    return element;
+}
+
 function populateBaseDataToPage(data) {
     populateFooter(data)
     populateNav(data.full_name);
@@ -46,10 +57,21 @@ function populateNav(fullName) {
     nav.addClass("stickyTransparent");
     nav.load('src/components/main_nav.html', function() {
         let mainNavContainer = nav.find('#main-nav');
-        mainNavContainer.append('<a id="top-link" href="index.html"></a>');
-        $('#top-link').html(fullName); 
-        mainNavContainer.append('<a href="portfolio.html">Portfolio</a>');
-        mainNavContainer.append('<a href="aboutme.html">About me</a>');
+        mainNavContainer.append(mainPageNavElement(fullName, true));
+        mainNavContainer.append(portfolioNavElement);
+        mainNavContainer.append(aboutMeNavElement);
+        
+        let sideNavContainer = nav.find('#side-nav');
+        sideNavContainer.append(mainPageNavElement(fullName, false));
+        sideNavContainer.append(portfolioNavElement);
+        sideNavContainer.append(aboutMeNavElement);
+
+        $('#sideMenuOpenButton').click(function() {
+            sideNavContainer.css("width", "280px");
+        });
+        $('#sideMenuCloseButton').click(function() {
+            sideNavContainer.css("width", "0");
+        });
     });
 }
 

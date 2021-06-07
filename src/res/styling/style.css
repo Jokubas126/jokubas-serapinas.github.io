@@ -134,7 +134,7 @@ div h1.paragraphHeader {
     float: right;
 }
 
-#main-nav #top-link {
+#main-nav .top-link {
     text-align: left;
     float: left;
     margin-left: 60px;
@@ -189,19 +189,59 @@ div h1.paragraphHeader {
     border-bottom: 1px solid var(--teritary_700);
 }
 
-#sideMenuButton {
+/* SIDE MENU */
+
+#sideMenuOpenButton {
     display: none;
-    max-width: 50px;
     position: absolute;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 20px;
 }
 
-#sideMenuButton ion-icon {
-    width: 25px;
-    height: 25px;
+#sideMenuOpenButton ion-icon {
+    font-size: xx-large;
+    color: var(--grey_500);
+}
+
+#sideMenuOpenButton ion-icon:hover {
     color: white;
+}
+
+#side-nav {
+    height: 100vh;
+    width: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--grey_900);
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding-top: 64px;
+    white-space: nowrap;
+}
+
+#side-nav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: x-large;
+    color: var(--grey_500);
+    display: block;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+#side-nav a:hover {
+    color: white;
+}
+
+#side-nav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: xx-large;
+    margin: 20px;
 }
 
 /*------------------------------------------*/
@@ -209,7 +249,7 @@ div h1.paragraphHeader {
 /*------------------------------------------*/
 
 footer {
-    background-color: var(--grey_800);
+    background-color: var(--grey_900);
     padding: 30px;
 }
 
@@ -288,7 +328,7 @@ footer {
         position: absolute;
     }
 
-    #sideMenuButton {
+    #sideMenuOpenButton {
         display: unset;
         width: 25px;
         height: 25px;
