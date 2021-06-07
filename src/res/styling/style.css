@@ -191,7 +191,7 @@ div h1.paragraphHeader {
 
 #sideMenuOpenButton ion-icon {
     font-size: xx-large;
-    color: var(--grey_500);
+    color: var(--grey_300);
 }
 
 #sideMenuOpenButton ion-icon:hover {
