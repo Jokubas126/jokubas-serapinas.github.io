@@ -101,8 +101,8 @@ box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
 /*------------------------------------------*/
 
 div.paragraphHeaderContainer {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(images/main_background.jpg);
-    background-image: linear-gradient(var(--black_50), var(--black_70)), url(images/main_background.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7)));
+    background-image: linear-gradient(var(--black_50), var(--black_70));
     height: 150px;
     background-size: cover;
     background-attachment: fixed;
@@ -124,7 +124,7 @@ div h1.paragraphHeader {
 }
 
 /* MAIN NAVIGATION */
-.main-nav {
+#main-nav {
     width: 100%;
     right: 0;
     margin-top: 20px;
@@ -134,19 +134,19 @@ div h1.paragraphHeader {
     float: right;
 }
 
-.main-nav #top-link {
+#main-nav .top-link {
     text-align: left;
     float: left;
     margin-left: 60px;
 }
 
-.main-nav a {
+#main-nav a {
     display: inline-block;
     margin-left: 30px;
 }
 
-.main-nav a:link,
-.main-nav a:visited {
+#main-nav a:link,
+#main-nav a:visited {
     padding: 5px 0px;
     color: white;
     text-decoration: none;
@@ -156,8 +156,8 @@ div h1.paragraphHeader {
     transition: border-bottom 0.2s;
 }
 
-.main-nav a:hover,
-.main-nav a:active{ border-bottom: 1px solid white; }
+#main-nav a:hover,
+#main-nav a:active{ border-bottom: 1px solid white; }
 
 /* STICKY NAVIGATION */
 
@@ -180,13 +180,68 @@ div h1.paragraphHeader {
     z-index: 9999;
 }
 
-.sticky .main-nav a {
+.sticky #main-nav a {
     color: var(--primary_900);
 }
 
-.sticky .main-nav a:hover,
-.sticky .main-nav a:active {
+.sticky #main-nav a:hover,
+.sticky #main-nav a:active {
     border-bottom: 1px solid var(--teritary_700);
+}
+
+/* SIDE MENU */
+
+#sideMenuOpenButton {
+    display: none;
+    position: absolute;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+#sideMenuOpenButton ion-icon {
+    font-size: xx-large;
+    color: var(--grey_500);
+}
+
+#sideMenuOpenButton ion-icon:hover {
+    color: white;
+}
+
+#side-nav {
+    height: 100vh;
+    width: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--grey_900);
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding-top: 64px;
+    white-space: nowrap;
+}
+
+#side-nav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: x-large;
+    color: var(--grey_500);
+    display: block;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+#side-nav a:hover {
+    color: white;
+}
+
+#side-nav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: xx-large;
+    margin: 20px;
 }
 
 /*------------------------------------------*/
@@ -194,7 +249,7 @@ div h1.paragraphHeader {
 /*------------------------------------------*/
 
 footer {
-    background-color: var(--grey_800);
+    background-color: var(--grey_900);
     padding: 30px;
 }
 
@@ -268,24 +323,22 @@ footer {
 /* Big phones to small tablets: from 481 to 767px */
 @media only screen and (max-width: 767px) {
 
-    div.paragraphHeaderContainer {
-       height: 100px;
-    }
-
     .stickyTransparent,
     .sticky {
-        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(images/main_background.jpg);
-        background-image: linear-gradient(var(--black_50), var(--black_70)), url(images/main_background.jpg);
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: center;
-        position: unset;
+        position: absolute;
+    }
+
+    #sideMenuOpenButton {
+        display: unset;
+        width: 25px;
+        height: 25px;
     }
     
-    .main-nav {
+    #main-nav {
         margin: 0;
         text-align: right;
         float: right;
+        display: none;
     }
 
     #title {

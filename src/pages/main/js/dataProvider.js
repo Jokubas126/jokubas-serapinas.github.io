@@ -1,18 +1,17 @@
 $('document').ready(
     function() {
-        console.log("Data provider is ready");
-        providePageData();
+        console.log("Main data provider is ready");
+        provideMainPageData();
     }
 );
 
-function providePageData() {
+function provideMainPageData() {
     $.ajax({
         method: 'GET',
-        url: BASE_URL + MAIN_PAGE_QUERY + "?callback=?",
+        url: BASE_URL + getTypeQuery(MAIN_PAGE_QUERY),
         dataType: 'jsonp',
         success: function(data) {
             console.log("Received data type: " + data.data_type);
-            populateBaseDataToPage(data);
             populateDataToMainPage(data);
         },
         error: errorFunction

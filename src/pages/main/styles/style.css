@@ -31,8 +31,8 @@
 /*------------------------------------------*/
 
 header {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(main_background.jpg);
-  background-image: linear-gradient(var(--black_50), var(--black_70)), url(main_background.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7)));
+  background-image: linear-gradient(var(--black_50), var(--black_70));
   background-size: cover;
   background-attachment: fixed;
   background-position: center;

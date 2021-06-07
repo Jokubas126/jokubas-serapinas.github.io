@@ -3,7 +3,7 @@ let portfolioListContainer = $('.portfolioContainer');
 
 
 function populateDataToPortfolioPage(data) {
-    populatePortfolioList(data.portfolio_items);
+    populatePortfolioList(data.content_items);
 }
 
 function populatePortfolioList(portfolioListData) {
@@ -34,11 +34,6 @@ function populatePortfolioList(portfolioListData) {
 
 $('document').ready(
     function() {
-        console.log("Ready");
-        observeHeader();
+        stickyNavWaypoint.waypoint(stickyHeaderSwitcher);
     }
 );
-
-function observeHeader() {
-    stickyNavWaypoint.waypoint(stickyHeaderSwitcher);
-}

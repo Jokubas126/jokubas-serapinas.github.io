@@ -1,6 +1,6 @@
 $('document').ready(
     function() {
-        console.log("Data provider is ready");
+        console.log("About me data provider is ready");
         providePageData();
     }
 );
@@ -8,12 +8,11 @@ $('document').ready(
 function providePageData() {
     $.ajax({
         method: 'GET',
-        url: BASE_URL + MAIN_PAGE_QUERY + "?callback=?",
+        url: BASE_URL + getTypeQuery(ABOUT_ME_PAGE_QUERY),
         dataType: 'jsonp',
         success: function(data) {
             console.log("Received data type: " + data.data_type);
             populateDataToAboutMePage(data);
-            populateBaseDataToPage(data);
         },
         error: errorFunction
     })

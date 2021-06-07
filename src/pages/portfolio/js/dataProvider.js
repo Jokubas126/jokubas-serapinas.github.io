@@ -1,19 +1,18 @@
 $('document').ready(
     function() {
-        console.log("Data provider is ready");
-        providePageData();
+        console.log("Portfolio data provider is ready");
+        providePortfolioData();
     }
 );
 
-function providePageData() {
+function providePortfolioData() {
     $.ajax({
         method: 'GET',
-        url: BASE_URL + MAIN_PAGE_QUERY + "?callback=?",
+        url: BASE_URL + getTypeQuery(PORTFOLIO_PAGE_QUERY),
         dataType: 'jsonp',
         success: function(data) {
             console.log("Received data type: " + data.data_type);
             populateDataToPortfolioPage(data);
-            populateBaseDataToPage(data);
         },
         error: errorFunction
     })
