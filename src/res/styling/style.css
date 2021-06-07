@@ -37,7 +37,6 @@ section { padding-top: 80px }
 
 /* Big tablets to 1200px (widths smaller then defined pixel row of 1140px) */
 @media only screen and (max-width: 1200px) {
-    .row { padding: 2%; }
 }
 
 /* Small tablets to big tablet: from 768 to 1023px */
@@ -52,7 +51,7 @@ section { padding-top: 80px }
     body { font-size: 16px;}
     section { padding: 30px 0; }
     .row { 
-        padding: 4%;
+        padding: 2%;
         display: grid;
         justify-content: none;
     }
@@ -61,11 +60,6 @@ section { padding-top: 80px }
 /* Small phones: from 0 to 480px */
 @media only screen and (max-width: 480px) {
     section { padding: 25px 0; }
-    .row { 
-        padding: 4%;
-        display: grid;
-        justify-content: none;
-    }
 }
 
 .box{ padding: 1%; }
@@ -90,10 +84,6 @@ border-radius: 15px;
 
 .card:hover {
 box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
-}
-
-.testPar {
-    height: 1000px;
 }
 
 /*------------------------------------------*/

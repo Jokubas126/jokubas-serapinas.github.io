@@ -118,11 +118,21 @@ header #frontInfo {
 }
 
 @media only screen and (max-width: 1200px) {
-
   .timelineListItem img {
       border-radius: 10px;
   }
 }
+
+@media only screen and (max-width: 767px) {
+    .timelineListItem img {
+      width: 50%;
+      max-width: 50%;
+      margin: auto;
+      align-self: center;
+      text-align: center;
+  }
+}
+
 @media only screen and (max-width: 480px) {
 
   .timelineListItem .text {
@@ -138,9 +148,6 @@ header #frontInfo {
   .timelineListItem img {
       width: 75%;
       max-width: 75%;
-      margin: auto;
-      align-self: center;
-      text-align: center;
   }
 
   .aboutMeItemEven img  {

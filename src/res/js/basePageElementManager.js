@@ -66,6 +66,8 @@ function populateNav(fullName) {
         sideNavContainer.append(portfolioNavElement);
         sideNavContainer.append(aboutMeNavElement);
 
+        sideNavContainer.css("width", "0");
+
         $('#sideMenuOpenButton').click(function() {
             sideNavContainer.css("width", "280px");
         });
