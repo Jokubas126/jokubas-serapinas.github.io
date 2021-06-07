@@ -31,11 +31,6 @@ function populateTimelineList(timelineListData) {
 
 $('document').ready(
     function() {
-        console.log("Ready");
-        observeHeader();
+        stickyNavWaypoint.waypoint(stickyHeaderSwitcher);
     }
 );
-
-function observeHeader() {
-    stickyNavWaypoint.waypoint(stickyHeaderSwitcher);
-} 

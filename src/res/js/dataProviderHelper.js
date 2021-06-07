@@ -1,6 +1,34 @@
-const BASE_URL = "https://portfolio-server-side-mongodb.herokuapp.com/";
+const BASE_URL = "https://portfolio-server-side-mongodb.herokuapp.com/app.js";
 
-const MAIN_PAGE_QUERY = "app.js";
+const BASE_PAGE_QUERY = "base";
+const MAIN_PAGE_QUERY = "main_page";
+const PORTFOLIO_PAGE_QUERY = "portfolio";
+const ABOUT_ME_PAGE_QUERY = "about_me";
+
+
+function getTypeQuery(queryString) {
+    return "?type=" + queryString;
+}
+
+$('document').ready(
+    function() {
+        console.log("Base data provider is ready");
+        provideBasePageData();
+    }
+);
+
+function provideBasePageData() {
+    $.ajax({
+        method: 'GET',
+        url: BASE_URL + getTypeQuery(BASE_PAGE_QUERY),
+        dataType: 'jsonp',
+        success: function(data) {
+            console.log("Received data type: " + data.data_type);
+            populateBaseDataToPage(data);
+        },
+        error: errorFunction
+    })
+}
 
 let errorFunction = function (jqXHR, exception) {
     var msg = '';

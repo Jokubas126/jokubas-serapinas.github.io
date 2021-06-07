@@ -4,7 +4,7 @@ let aboutMeListContainer = $('#aboutMeContainer');
 var isItemEven = false;
 
 function populateDataToAboutMePage(data) {
-    populateAboutMeList(data.about_me_items);
+    populateAboutMeList(data.content_items);
 }
 
 function populateAboutMeList(aboutMeListData) {
@@ -39,11 +39,6 @@ function getItemComponent() {
 
 $('document').ready(
     function() {
-        console.log("Ready");
-        observeHeader();
+        stickyNavWaypoint.waypoint(stickyHeaderSwitcher);
     }
 );
-
-function observeHeader() {
-    stickyNavWaypoint.waypoint(stickyHeaderSwitcher);
-} 
