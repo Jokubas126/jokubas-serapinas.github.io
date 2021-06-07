@@ -30,25 +30,48 @@ section #introduction {
   margin-bottom: 50px;
 }
 
-.portfolioItemTitle,
-.portfolioItemDescription {
-  margin-left: 28px;
+#portfolioItemLink {
+  font-size: 34px;
+  color: black;
+  right: 0;
+  top: 0;
+  margin-top: 28px;
   margin-right: 28px;
 }
 
-.portfolioItemTitle {
-  font-size: xx-large;
-  font-weight: 500;
+.text {
   margin-top: 28px;
+  margin-left: 28px;
+  margin-right: 28px;
+  color: var(--teritary_900);
 }
 
+.portfolioItemTitle {
+  font-size: x-large;
+  font-weight: 500;
+  color: var(--teritary_900);
+  margin-bottom: 6px;
+}
+
+.portfolioItemTitle:link,
+.portfolioItemTitle:visited {
+    padding: 2px 0px;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+}
+
+.portfolioItemTitle:hover,
+.portfolioItemTitle:active{ border-bottom: 1px solid var(--teritary_900); }
+
 .portfolioItemDescription {
-  margin-top: 16px;
+  margin-top: 8px;
   font-size: larger;
   font-weight: 300;
 }
-/* Image list */
 
+/* Image list */
 #portfolioImageList {
   text-align: center;
   overflow-x: scroll;

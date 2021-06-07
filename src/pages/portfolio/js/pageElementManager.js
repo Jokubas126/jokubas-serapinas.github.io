@@ -11,7 +11,10 @@ function populatePortfolioList(portfolioListData) {
         portfolioListContainer.append('<li></li>');
         let listItem = portfolioListContainer.find('li:last-child');
         listItem.load('src/components/portfolioListItem.html', function() {
-            listItem.find(".portfolioItemTitle").html(item.title);
+            let title = listItem.find(".portfolioItemTitle");
+            title.html(item.title);
+            title.attr('href', item.url);
+            listItem.find('#portfolioItemLink').attr('href', item.url);
             listItem.find(".portfolioItemDescription").html(item.description);
             let imageList = listItem.find("#portfolioImageList");
             for(let imageLink of item.images) {

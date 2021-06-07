@@ -86,10 +86,12 @@ header #frontInfo {
 }
 
 .timelineListItem img {
-  width: auto;
-  width: 35%;
   border-radius: 0 10px 10px 0;
   margin: auto;
+  width: auto;
+  height: auto;
+  max-width: 45%;
+  min-width: 35%;
 }
 
 .timelineListItem .text {
@@ -97,22 +99,23 @@ header #frontInfo {
   font-weight: 300;
   text-align: left;
   font-size: large;
-  color: var(--tetriary_900);
+  color: var(--teritary_900);
 }
 
 .timelineItemDate {
   font-size: large;
   font-weight: 400;
+  
 }
 
 .timelineItemTitle {
-  font-size: xx-large;
+  font-size: x-large;
   font-weight: 500;
   margin-top: 8px;
 }
 
 .timelineItemDescription {
-  margin-top: 16px;
+  margin-top: 8px;
   font-size: larger;
   font-weight: 300;
 }
