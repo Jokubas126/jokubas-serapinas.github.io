@@ -25,6 +25,8 @@ function populateTimelineList(timelineListData) {
             listItem.find(".timelineItemTitle").html(item.title);
             listItem.find(".timelineItemDescription").html(item.description);
             listItem.find("img").attr("src", item.image_link);
+
+            appearOnScroll.observe(listItem.find('.slide-in')[0]);
         });
     }
 };

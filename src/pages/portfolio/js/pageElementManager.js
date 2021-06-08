@@ -7,7 +7,7 @@ function populateDataToPortfolioPage(data) {
 }
 
 function populatePortfolioList(portfolioListData) {
-    for(let item of portfolioListData) {
+    portfolioListData.forEach((item, index) => {
         portfolioListContainer.append('<li></li>');
         let listItem = portfolioListContainer.find('li:last-child');
         listItem.load('src/components/portfolioListItem.html', function() {
@@ -31,8 +31,18 @@ function populatePortfolioList(portfolioListData) {
                     imageList.scrollLeft(imageList.scrollLeft() + 350);
                 }
             );
+            
+            let slider = listItem.find('.slide-in-side');
+
+            if (index % 2 == 0) {
+                slider.addClass('slide-left');
+            } else {
+                slider.addClass('slide-right');
+            }
+
+            appearOnScroll.observe(slider[0]);
         });
-    }
+    })
 };
 
 $('document').ready(

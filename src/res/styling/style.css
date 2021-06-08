@@ -65,14 +65,41 @@ li:last-child,
 li:first-child { margin: none; }
 
 .card {
-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
--webkit-transition: 0.25s; 
-transition: 0.25s;
-border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    -webkit-transition: 0.25s; 
+    transition: 0.25s;
+    border-radius: 15px;
 }
 
 .card:hover {
-box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+}
+
+/* Sliders */
+
+.slide-in {
+    transform: translateY(40%);
+    opacity: 0;
+    transition: transform 400ms ease-in, opacity 300ms ease-in;
+}
+
+.slide-in-side {
+    opacity: 0;
+    transition: transform 400ms ease-in, opacity 300ms ease-in;
+}
+
+.slide-in-side.slide-left {
+    transform: translateX(25%);
+}
+
+.slide-in-side.slide-right {
+    transform: translateX(-25%);
+}
+
+.slide-in.appear,
+.slide-in-side.appear {
+    transform: translate(0);
+    opacity: 1;
 }
 
 /*------------------------------------------*/

@@ -19,6 +19,7 @@ function populateAboutMeList(aboutMeListData) {
                 for (let description of item.description) {
                     descriptionContainer.append('<p>' + description + '</p>');
                 }
+                appearOnScroll.observe(listItem.find('.slide-in-side')[0]);
             });
             isItemEven = !isItemEven;
         } else if (item.type == "category") {
