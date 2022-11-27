@@ -7,9 +7,8 @@ $('document').ready(
 
 function provideMainPageData() {
     $.ajax({
-        method: 'GET',
         url: BASE_URL + MAIN_PAGE_QUERY,
-        dataType: 'jsonp',
+        dataType: 'json',
         success: function(data) {
             console.log("Received data type: " + data.data_type);
             populateDataToMainPage(data);

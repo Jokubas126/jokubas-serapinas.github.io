@@ -7,9 +7,8 @@ $('document').ready(
 
 function providePortfolioData() {
     $.ajax({
-        method: 'GET',
         url: BASE_URL + PORTFOLIO_PAGE_QUERY,
-        dataType: 'jsonp',
+        dataType: 'json',
         success: function(data) {
             console.log("Received data type: " + data.data_type);
             populateDataToPortfolioPage(data);

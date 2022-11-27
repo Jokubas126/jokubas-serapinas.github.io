@@ -14,9 +14,8 @@ $('document').ready(
 
 function provideBasePageData() {
     $.ajax({
-        method: 'GET',
         url: BASE_URL + BASE_PAGE_QUERY,
-        dataType: 'jsonp',
+        dataType: 'json',
         success: function(data) {
             console.log("Received data type: " + data.data_type);
             populateBaseDataToPage(data);
