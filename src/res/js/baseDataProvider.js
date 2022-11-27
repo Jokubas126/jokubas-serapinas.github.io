@@ -1,14 +1,9 @@
-const BASE_URL = "https://portfolio-server-side-mongodb.herokuapp.com/app.js";
+const BASE_URL = "https://jokubas126.github.io/jokubas-serapinas.data/";
 
-const BASE_PAGE_QUERY = "base";
-const MAIN_PAGE_QUERY = "main_page";
-const PORTFOLIO_PAGE_QUERY = "portfolio";
-const ABOUT_ME_PAGE_QUERY = "about_me";
-
-
-function getTypeQuery(queryString) {
-    return "?type=" + queryString;
-}
+const BASE_PAGE_QUERY = "base.json";
+const MAIN_PAGE_QUERY = "main_page.json";
+const PORTFOLIO_PAGE_QUERY = "portfolio_page.json";
+const ABOUT_ME_PAGE_QUERY = "about_me.json";
 
 $('document').ready(
     function() {
@@ -20,7 +15,7 @@ $('document').ready(
 function provideBasePageData() {
     $.ajax({
         method: 'GET',
-        url: BASE_URL + getTypeQuery(BASE_PAGE_QUERY),
+        url: BASE_URL + BASE_PAGE_QUERY,
         dataType: 'jsonp',
         success: function(data) {
             console.log("Received data type: " + data.data_type);

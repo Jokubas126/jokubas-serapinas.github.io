@@ -8,7 +8,7 @@ $('document').ready(
 function providePageData() {
     $.ajax({
         method: 'GET',
-        url: BASE_URL + getTypeQuery(ABOUT_ME_PAGE_QUERY),
+        url: BASE_URL + ABOUT_ME_PAGE_QUERY,
         dataType: 'jsonp',
         success: function(data) {
             console.log("Received data type: " + data.data_type);
